@@ -1,0 +1,20 @@
+from generate_spicy_id import SpicyId
+from get_object_values import get_object_type, get_object_timestamp
+
+
+def main() -> None:
+    # generate_random_string(length=10)
+    # generate_random_string(length=20)
+    # generate_random_string()
+    # OBJECT: str = "tbl"
+    # LENGTH: int = 10
+    # spicy_id: SpicyId = SpicyId(obj_type=OBJECT, length=LENGTH)
+    # print(spicy_id)
+    # ts: float = get_unix_time()
+    # mask_timestamp(ts=ts)
+    # print(SpicyId(obj_type=OBJECT, length=LENGTH, timestamp=False))
+    # print(SpicyId(obj_type=OBJECT, length=LENGTH, timestamp=True))
+    # get_object_type(SpicyId(obj_type=OBJECT, length=LENGTH))
+    # print(get_object_timestamp(SpicyId(obj_type=OBJECT, length=LENGTH, timestamp=True)))
+    # print(get_object_timestamp(SpicyId(obj_type=OBJECT, length=LENGTH, timestamp=False)))
+    return None
