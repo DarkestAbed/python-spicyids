@@ -1,9 +1,8 @@
 # spicy_ids/generate_spicy_id.py
 
-from generate_random_strings import generate_random_string
-from generate_timestamp_value import get_masked_ts
-
-from utils import logger
+from spicy_ids.generate_random_strings import generate_random_string
+from spicy_ids.generate_timestamp_value import get_masked_ts
+from spicy_ids.utils import logger
 
 
 class SpicyId:

@@ -2,7 +2,7 @@
 
 from datetime import datetime
 
-from utils import logger
+from spicy_ids.utils import logger
 
 
 def get_object_type(spicy_id: str) -> None:
@@ -19,10 +19,10 @@ def get_object_type(spicy_id: str) -> None:
     logger.debug(f"{obj_type = }")
     try:
         obj_val: str = COMMON_OBJECT_TYPES.get(obj_type)
-        print(f"Object type is {obj_val}")
+        obj_type: str = f"Object type is {obj_val}"
     except KeyError:
-        print(f"Uncommon type. Prefix found is {obj_type}")
-    return None
+        obj_type: str = f"Uncommon type. Prefix found is {obj_type}"
+    return obj_type
 
 
 def get_object_timestamp(spicy_id: str) -> str:

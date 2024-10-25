@@ -2,7 +2,7 @@
 
 from datetime import datetime, timezone
 
-from utils import logger
+from spicy_ids.utils import logger
 
 
 def get_unix_time() -> int:
