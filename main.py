@@ -1,6 +1,6 @@
 # main.py
 
-from spicy_ids import SpicyId, get_object_type, get_object_timestamp
+from src import SpicyId, get_object_type, get_object_timestamp
 
 
 def main() -> None:

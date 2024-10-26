@@ -4,7 +4,7 @@ from random import sample
 from string import ascii_lowercase, ascii_uppercase, digits
 from typing import LiteralString
 
-from spicy_ids.utils import logger
+from src.utils import logger
 
 
 def generate_random_string(length: int = 15) -> str:

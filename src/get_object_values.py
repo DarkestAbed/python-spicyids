@@ -2,7 +2,7 @@
 
 from datetime import datetime
 
-from spicy_ids.utils import logger
+from src.utils import logger
 
 
 def get_object_type(spicy_id: str) -> None:
