@@ -1,0 +1,19 @@
+# setup.pu
+
+from setuptools import setup
+
+setup(
+    name="python-spicyid",
+    version="1.0.0",
+    author="The Darkest Abed",
+    author_email="thedarkestabed@gmail.com",
+    packages=["src",],
+    scripts=[],
+    url="https://github.com/DarkestAbed/python-spicyids",
+    license="LICENSE.md",
+    description="A Python module to create spicy ids (similar to Stripe's naming conventions)",
+    long_description=open("README.md").read(),
+    install_requires=[
+        "loggerLogs @ git+https://github.com/DarkestAbed/loggerLogs.git@1004303dd6050c96eb6ee6462c1dcb1356150750",
+    ],
+)
