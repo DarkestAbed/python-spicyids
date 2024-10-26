@@ -3,7 +3,7 @@
 from pytest import raises
 from typing import Any
 
-from src.generate_random_strings import generate_random_string
+from spicyid.generate_random_strings import generate_random_string
 
 
 def test_generate_strings() -> None:

@@ -3,7 +3,7 @@
 from pytest import raises
 from typing import Any
 
-from src.generate_timestamp_value import (
+from spicyid.generate_timestamp_value import (
     get_unix_time,
     mask_timestamp,
     get_masked_ts,
