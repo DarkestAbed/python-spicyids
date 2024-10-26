@@ -54,7 +54,19 @@ Install the Python package from the GitHub release:
 ## Usage
 
 ```python
-import spicyid
+>>> from spicyid import SpicyId
+>>> print(SpicyId(obj_type="rec", length=10, timestamp=False))
+rec_u8rPJn3AlM
+>>> print(SpicyId(obj_type="rec", length=10, timestamp=True))
+rec_a0Og9su1mU-6961365929088
+>>> spicyid.get_object_type(SpicyId(obj_type="tbl", length=25))
+'Object type is table'
+>>> spicyid.get_object_timestamp(SpicyId(obj_type="tbl", length=25))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/javi/aNewHome/Code/tests/venv/lib/python3.12/site-packages/spicyid/get_object_values.py", line 30, in get_object_timestamp
+    raise ValueError("The provided Spicy Id is not timestamped.")
+ValueError: The provided Spicy Id is not timestamped.
 ```
 
 ## Changelog
