@@ -69,6 +69,55 @@ Traceback (most recent call last):
 ValueError: The provided Spicy Id is not timestamped.
 ```
 
+### Sample script
+```python
+from spicyid import SpicyId, get_object_timestamp, get_object_type
+
+
+def create_spicy_id() -> str | SpicyId:
+    spicy_id = SpicyId(
+        obj_type="rec",     ## object type for the id
+        length=25,          ## length of the random string
+        timestamp=True,     ## should the id include a timestamp string?
+    )
+    print(spicy_id)
+    return spicy_id
+
+
+def get_timestamp() -> None:
+    spicy_id = SpicyId("rec", 20, True)
+    res = get_object_timestamp(spicy_id=spicy_id)
+    print(res)
+    ## if we test a non-timestamped spicy id, a ValueError is raised
+    try:
+        get_object_timestamp(SpicyId("obj", 10, False))
+    except Exception as e:
+        print("An exception occurred:", e)
+    return None
+
+
+def get_type() -> None:
+    ## several standard objects are included
+    print(get_object_type(SpicyId("tbl", 10,)))
+    print(get_object_type(SpicyId("vw", 10,)))
+    print(get_object_type(SpicyId("lst", 10,)))
+    return None
+
+
+def main() -> None:
+    create_spicy_id()
+    get_timestamp()
+    get_type()
+    return None
+
+
+if __name__ == "__main__":
+    main()
+else:
+    pass
+
+```
+
 ## Changelog
 See [CHANGELOG.md](CHANGELOG.md) for a summary of changes.
 
