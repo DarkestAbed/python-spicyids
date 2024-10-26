@@ -14,7 +14,9 @@ def get_unix_time() -> int:
     return epoch_ts
 
 
-def mask_timestamp(ts: float) -> str:
+def mask_timestamp(ts: int) -> str:
+    if not isinstance(ts, int) and not isinstance(ts, float):
+        raise TypeError(f"Argument 'ts' of wrong type. Expected 'int' or 'float', found {type(ts)}")
     masked_ts: int = ts * 4024
     ts_to_str: str = str(masked_ts)
     logger.debug(f"{masked_ts = }; {len(ts_to_str)}")
